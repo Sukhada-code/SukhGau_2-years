@@ -2450,37 +2450,41 @@ footer {
   line-height: 1.6;
 }
 
+
 /* =========================================================
-   FINAL MOBILE FIX — CENTER MEMORY CARD
+   FINAL MOBILE MEMORY ALIGNMENT
    ========================================================= */
 
 @media (max-width: 600px) {
 
   .memory-section {
     width: 100%;
-    max-width: none;
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
     padding-left: 18px;
     padding-right: 18px;
+    box-sizing: border-box;
   }
 
   .memory-gallery {
     width: 100%;
-    max-width: 560px;
+    max-width: 620px;
     margin-left: auto;
     margin-right: auto;
+    box-sizing: border-box;
   }
 
   .memory-card {
+    width: 100%;
     left: 0;
     right: 0;
-    width: 100%;
-    margin-left: 0;
-    margin-right: 0;
+    box-sizing: border-box;
   }
 
   .memory-button {
     width: 100%;
-    margin: 0;
+    box-sizing: border-box;
   }
 
 }
