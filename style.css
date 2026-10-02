@@ -2449,3 +2449,38 @@ footer {
   font-size: 15px;
   line-height: 1.6;
 }
+
+/* =========================================================
+   FINAL MOBILE FIX — CENTER MEMORY CARD
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .memory-section {
+    width: 100%;
+    max-width: none;
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .memory-gallery {
+    width: 100%;
+    max-width: 560px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .memory-card {
+    left: 0;
+    right: 0;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .memory-button {
+    width: 100%;
+    margin: 0;
+  }
+
+}
