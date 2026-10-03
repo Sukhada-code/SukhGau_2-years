@@ -2488,3 +2488,522 @@ footer {
   }
 
 }
+
+/* =========================================================
+   OUR PLANS
+   ========================================================= */
+
+.plans-section {
+  width: min(1100px, calc(100% - 48px));
+  max-width: 1100px;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  padding: 100px 0 130px;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   SECTION 03 HEADER
+   SAME STRUCTURE AS SECTION 02
+   ========================================================= */
+
+.plans-section .plans-section-heading {
+  width: 100%;
+
+  margin: 0 0 85px;
+
+  display: grid;
+
+  grid-template-columns: 70px 1fr;
+
+  column-gap: 18px;
+
+  align-items: start;
+}
+
+.plans-section .plans-section-heading > span {
+  display: block;
+
+  color: var(--pink);
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 11px;
+
+  letter-spacing: .15em;
+
+  line-height: 1;
+
+  padding-top: 4px;
+}
+
+.plans-section .plans-section-heading h2 {
+  margin: 0;
+
+  color: var(--ink);
+
+  font-family: "Playfair Display", serif;
+
+  font-size: clamp(2.4rem, 5vw, 4.3rem);
+
+  font-weight: 500;
+
+  line-height: 1;
+
+  letter-spacing: -.04em;
+}
+
+.plans-section .plans-section-heading p {
+  max-width: 590px;
+
+  margin: 18px 0 0;
+
+  color: var(--muted);
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 15px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   BIG INTRO
+   ========================================================= */
+
+.plans-intro {
+  width: 100%;
+
+  margin: 0 auto 70px;
+
+  text-align: center;
+}
+
+.plans-kicker {
+  display: block;
+
+  margin-bottom: 25px;
+
+  color: var(--pink);
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: .28em;
+
+  text-transform: uppercase;
+}
+
+.plans-intro h3 {
+  width: 100%;
+
+  max-width: 1050px;
+
+  margin: 0 auto;
+
+  color: var(--ink);
+
+  font-family: "Playfair Display", serif;
+
+  font-size: clamp(52px, 6vw, 82px);
+
+  font-weight: 500;
+
+  line-height: .98;
+
+  letter-spacing: -.035em;
+}
+
+.plans-intro h3 em {
+  color: var(--pink);
+
+  font-style: italic;
+}
+
+.plans-intro > p {
+  margin: 28px auto 0;
+
+  color: var(--muted);
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 16px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   CATEGORY BUTTONS
+   ========================================================= */
+
+.plans-categories {
+  width: 100%;
+
+  display: flex;
+
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  gap: 10px;
+
+  margin: 0 auto 45px;
+}
+
+.plan-category {
+  padding: 11px 18px;
+
+  border: 1px solid var(--line);
+
+  border-radius: 999px;
+
+  background: white;
+
+  color: var(--muted);
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: .2s ease;
+}
+
+.plan-category:hover {
+  transform: translateY(-2px);
+
+  border-color: rgba(232,73,104,.35);
+
+  color: var(--pink);
+}
+
+.plan-category.active {
+  background: var(--pink);
+
+  border-color: var(--pink);
+
+  color: white;
+
+  box-shadow:
+    0 8px 22px rgba(232,73,104,.18);
+}
+
+
+/* =========================================================
+   PLAN CARDS
+   ========================================================= */
+
+.plans-list {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 15px;
+
+  margin: 0 auto;
+
+  box-sizing: border-box;
+}
+
+.plan-item {
+  width: 100%;
+
+  min-width: 0;
+
+  box-sizing: border-box;
+
+  padding: 21px 23px;
+
+  border: 1px solid var(--line);
+
+  border-radius: 20px;
+
+  background: rgba(255,255,255,.72);
+
+  color: var(--ink);
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  box-shadow:
+    0 10px 30px rgba(48,31,34,.045);
+
+  transition: .2s ease;
+}
+
+.plan-item:hover {
+  transform: translateY(-4px);
+
+  border-color:
+    rgba(232,73,104,.25);
+
+  box-shadow:
+    0 16px 35px rgba(48,31,34,.09);
+}
+
+.plan-item small {
+  display: block;
+
+  margin-top: 6px;
+
+  color: var(--muted);
+
+  font-size: 11px;
+
+  font-weight: 400;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   RANDOM PICK
+   ========================================================= */
+
+.plans-random-area {
+  width: 100%;
+
+  max-width: 700px;
+
+  margin: 55px auto 0;
+
+  text-align: center;
+}
+
+.plans-random-divider {
+  display: flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  margin-bottom: 25px;
+
+  color: #b39da0;
+
+  font-size: 9px;
+
+  letter-spacing: .2em;
+}
+
+.plans-random-divider::before,
+.plans-random-divider::after {
+  content: "";
+
+  flex: 1;
+
+  height: 1px;
+
+  background: var(--line);
+}
+
+.plans-random-button {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 10px;
+
+  padding: 16px 28px;
+
+  border: 0;
+
+  border-radius: 999px;
+
+  background: var(--ink);
+
+  color: white;
+
+  font-family: "DM Sans", sans-serif;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: .2s ease;
+}
+
+.plans-random-button:hover {
+  transform: translateY(-3px);
+
+  background: var(--pink);
+}
+
+.plans-random-area > p {
+  margin: 11px 0 0;
+
+  color: var(--muted);
+
+  font-size: 11px;
+}
+
+
+/* =========================================================
+   RANDOM RESULT
+   ========================================================= */
+
+.plans-result {
+  display: none;
+
+  width: min(650px, 100%);
+
+  margin: 28px auto 0;
+
+  padding: 30px 25px;
+
+  box-sizing: border-box;
+
+  text-align: center;
+
+  border-radius: 24px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #fff7f8,
+      #ffffff
+    );
+
+  border:
+    1px solid rgba(232,73,104,.15);
+
+  box-shadow:
+    0 15px 45px rgba(48,31,34,.08);
+}
+
+.plans-result.show {
+  display: block;
+
+  animation: planResultIn .45s ease;
+}
+
+@keyframes planResultIn {
+
+  from {
+    opacity: 0;
+    transform:
+      translateY(12px)
+      scale(.98);
+  }
+
+  to {
+    opacity: 1;
+    transform:
+      translateY(0)
+      scale(1);
+  }
+
+}
+
+.plans-result-kicker {
+  color: var(--pink);
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: .22em;
+}
+
+.plans-result h3 {
+  margin: 10px 0 5px;
+
+  color: var(--ink);
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 34px;
+}
+
+.plans-result p {
+  margin: 0;
+
+  color: var(--muted);
+
+  font-size: 13px;
+}
+
+.plans-again-button {
+  margin-top: 18px;
+
+  padding: 8px 16px;
+
+  border: 1px solid var(--line);
+
+  border-radius: 999px;
+
+  background: white;
+
+  color: var(--muted);
+
+  font-size: 11px;
+
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 750px) {
+
+  .plans-section {
+    width: calc(100% - 36px);
+
+    padding:
+      75px 0 100px;
+  }
+
+  .plans-section .plans-section-heading {
+    grid-template-columns: 42px 1fr;
+
+    column-gap: 18px;
+
+    margin-bottom: 65px;
+  }
+
+  .plans-section .plans-section-heading > span {
+    font-size: 10px;
+  }
+
+  .plans-section .plans-section-heading h2 {
+    font-size:
+      clamp(2.2rem, 9vw, 3.5rem);
+  }
+
+  .plans-section .plans-section-heading p {
+    font-size: 14px;
+  }
+
+  .plans-intro h3 {
+    font-size:
+      clamp(42px, 12vw, 62px);
+  }
+
+  .plans-list {
+    grid-template-columns: 1fr;
+  }
+
+}

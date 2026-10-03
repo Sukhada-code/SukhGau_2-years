@@ -1848,3 +1848,312 @@ document.addEventListener(
 
   }
 );
+/* =========================================================
+   OUR PLANS — INLINE CATEGORY + RANDOM PICK
+   ========================================================= */
+
+const plansCategories =
+  document.querySelectorAll(".plan-category");
+
+const plansList =
+  document.getElementById("plansList");
+
+const plansRandomButton =
+  document.getElementById("plansRandomButton");
+
+const plansAgainButton =
+  document.getElementById("plansAgainButton");
+
+const plansResult =
+  document.getElementById("plansResult");
+
+const plansResultTitle =
+  document.getElementById("plansResultTitle");
+
+const plansResultSubtitle =
+  document.getElementById("plansResultSubtitle");
+
+
+/* ---------------------------------------------------------
+   THE PLANS
+   --------------------------------------------------------- */
+
+const relationshipPlans = {
+
+  hungry: [
+    {
+      title: "Kollage",
+      subtitle: "Garlic butter naan, chicken tangdi",
+      url: "https://maps.app.goo.gl/6Yy8AA8SkjvguvG29?g_st=aw"
+    },
+    {
+      title: "Cafe Flex",
+      subtitle: "Thin crust pizza, peri-peri chicken steak",
+      url: "https://maps.app.goo.gl/d6baepRdHASGejR19?g_st=aw"
+    },
+    {
+      title: "Ahilyadevi's Thali",
+      subtitle: "my favourite thali place <3",
+      url: "https://maps.app.goo.gl/7pzpYzZj9RYnZtSF7?g_st=aw"
+    },
+    {
+      title: "Verandah",
+      subtitle: "hot chocolate date!",
+      url: "https://maps.app.goo.gl/QAg8uZ7M8bZFCMUC6?g_st=aw"
+    },
+
+    {
+      title: "Tipplr",
+      subtitle: "questionable decisions incomin after having some 🍷",
+      url: "https://maps.app.goo.gl/6eEST9iFPixZmjwy7?g_st=aw"
+    }
+  ],
+
+  fun: [
+    {
+      title: "Arai",
+      subtitle: "Have to go there with you 🥺♡",
+      url: "https://maps.app.goo.gl/6eEST9iFPixZmjwy7?g_st=aw"
+      
+    },
+    {
+      title: "Anand Niketan Badminton court",
+      subtitle: "let's see who wins.",
+      url: "https://maps.app.goo.gl/VTbuT7s63JNARHya8?g_st=aw"
+    },
+    {
+      title: "Shopping for new clothes",
+      subtitle: "you obviously need new outfits."
+    },
+    {
+      title: "See all brainrot Sallu movies",
+      subtitle: "a completely serious cinematic commitment."
+    }
+  ],
+
+  romantic: [
+    {
+      title: "University walk",
+      subtitle: "Anu cha naav gheu, but it'll be just us, walking around ♡",
+      url: "https://maps.app.goo.gl/hE5HMJgZb7Tzpu4S8?g_st=aw"
+    },
+    {
+      title: "Driving late at night <3",
+      subtitle: "with no particular destination required."
+    },
+    {
+      title: "a home cooked meal by yours truly 💓",
+      subtitle: "This is something I've been learning for 1 year to do for you. Tap on this to choose any one of the dishes you like, and I'll make it for you.",
+      url: "https://www.instagram.com/s/aGlnaGxpZ2h0OjE3OTYyODM1NTY1MDEwMzkw?story_media_id=3802020761074979589_47706904695&stkn=eW9tanVhcWhwZmdk"
+    }
+  ],
+
+  selfcare: [
+    {
+      title: "Dermatologist appointment",
+      subtitle: "First visit's on me, no arguments."
+    },
+    {
+      title: "Getting your corn re-checked",
+      subtitle: "very very important business"
+    }
+  ]
+
+};
+
+
+/* ---------------------------------------------------------
+   CATEGORY NAMES
+   --------------------------------------------------------- */
+
+const categoryNames = {
+
+  hungry: "Hungry 🍴",
+
+  fun: "Fun 🎉",
+
+  romantic: "Romantic ♡",
+
+  selfcare: "Self care ✨",
+
+
+};
+
+
+/* ---------------------------------------------------------
+   SHOW CATEGORY
+   --------------------------------------------------------- */
+
+function showPlanCategory(category) {
+
+  if (!plansList) {
+    return;
+  }
+
+  const plans =
+    relationshipPlans[category] || [];
+
+  plansList.innerHTML = "";
+
+
+  plans.forEach((plan) => {
+
+    const item = document.createElement(
+  plan.url ? "a" : "div"
+);
+
+item.className = "plan-item";
+
+if (plan.url) {
+  item.href = plan.url;
+  item.target = "_blank";
+  item.rel = "noopener noreferrer";
+}
+
+item.innerHTML = `
+  <span>${plan.title}</span>
+  <small>${plan.subtitle}</small>
+`;
+
+plansList.appendChild(item);
+
+  });
+
+
+  /* Update active category */
+
+  plansCategories.forEach(
+    (button) => {
+
+      button.classList.toggle(
+        "active",
+        button.dataset.category === category
+      );
+
+    }
+  );
+
+}
+
+
+/* ---------------------------------------------------------
+   CATEGORY BUTTONS
+   --------------------------------------------------------- */
+
+plansCategories.forEach(
+  (button) => {
+
+    button.addEventListener(
+      "click",
+      () => {
+
+        const category =
+          button.dataset.category;
+
+        showPlanCategory(category);
+
+
+        /* Hide previous random result */
+
+        if (plansResult) {
+
+          plansResult.classList.remove(
+            "show"
+          );
+
+        }
+
+      }
+    );
+
+  }
+);
+
+
+/* ---------------------------------------------------------
+   RANDOM PICK
+   --------------------------------------------------------- */
+
+function pickRandomPlan() {
+
+  const allPlans = [];
+
+
+  Object.entries(
+    relationshipPlans
+  ).forEach(
+    ([category, plans]) => {
+
+      plans.forEach(
+        (plan) => {
+
+          allPlans.push({
+            ...plan,
+            category
+          });
+
+        }
+      );
+
+    }
+  );
+
+
+  const randomPlan =
+    allPlans[
+      Math.floor(
+        Math.random() *
+        allPlans.length
+      )
+    ];
+
+
+  if (
+    !randomPlan ||
+    !plansResult ||
+    !plansResultTitle ||
+    !plansResultSubtitle
+  ) {
+
+    return;
+
+  }
+
+
+  /* Set result */
+
+  plansResultTitle.textContent =
+    randomPlan.title;
+
+  plansResultSubtitle.textContent =
+    `${categoryNames[randomPlan.category]} · ${randomPlan.subtitle}`;
+
+
+  /* Restart animation */
+
+  plansResult.classList.remove(
+    "show"
+  );
+
+  void plansResult.offsetWidth;
+
+  plansResult.classList.add(
+    "show"
+  );
+
+}
+
+
+/* ---------------------------------------------------------
+   PICK FOR US BUTTON
+   --------------------------------------------------------- */
+
+if (plansRandomButton) {
+
+  plansRandomButton.addEventListener(
+    "click",
+    pickRandomPlan
+  );
+
+}
+
