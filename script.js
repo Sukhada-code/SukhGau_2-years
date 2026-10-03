@@ -1906,6 +1906,11 @@ const relationshipPlans = {
       title: "Tipplr",
       subtitle: "questionable decisions incomin after having some 🍷",
       url: "https://maps.app.goo.gl/6eEST9iFPixZmjwy7?g_st=aw"
+    },
+    {
+      title: "Agerra's",
+      subtitle: "To eat fihh, ani baazula katakirr pan ahe!",
+      url: "https://maps.app.goo.gl/JuabgpzgQeWv4dCE9?g_st=aw"
     }
   ],
 
@@ -1928,6 +1933,16 @@ const relationshipPlans = {
     {
       title: "See all brainrot Sallu movies",
       subtitle: "a completely serious cinematic commitment."
+    },
+    {
+      title: "Heads up!",
+      subtitle: "the most khekhekhe we've ever done while playing a game :p",
+      url: "https://clueup.fun/"
+    },
+    {
+      title: "Swimming at the pool",
+      subtitle: "Ani mag tya nantar grilled chicken mayo sandwich khayla jaaychay :p",
+      url: "https://maps.app.goo.gl/kJJ3xmAQeLLwvKsJ7?g_st=aw"
     }
   ],
 
@@ -1945,17 +1960,25 @@ const relationshipPlans = {
       title: "a home cooked meal by yours truly 💓",
       subtitle: "This is something I've been learning for 1 year to do for you. Tap on this to choose any one of the dishes you like, and I'll make it for you.",
       url: "https://www.instagram.com/s/aGlnaGxpZ2h0OjE3OTYyODM1NTY1MDEwMzkw?story_media_id=3802020761074979589_47706904695&stkn=eW9tanVhcWhwZmdk"
+    },
+      {
+      title: "Free sukhu massage coupon💓",
+      subtitle: "This is the last I could do after all these long and difficult flights you've been taking :(<3",
     }
   ],
 
   selfcare: [
     {
-      title: "Dermatologist appointment",
+      title: "Dermat appointment",
       subtitle: "First visit's on me, no arguments."
     },
     {
       title: "Getting your corn re-checked",
-      subtitle: "very very important business"
+      subtitle: "very very important"
+    },
+     {
+      title: "Catching you up to meet my gym friends and Anu!!",
+      subtitle: "Khup masta janar ahe hi bhet!"
     }
   ]
 
